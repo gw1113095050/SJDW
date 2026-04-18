@@ -1,11 +1,17 @@
 timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
 2026-04-18T11:00	baseline	brand-three-questions	-	82	baseline	-	初始评估	dry_run
+2026-04-18T12:00	dd3730c	brand-three-questions	82	83	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	brand-five-stages	-	80	baseline	-	初始评估	dry_run
+2026-04-18T12:00	dd3730c	brand-five-stages	80	81	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	category-three-realms	-	83	baseline	-	初始评估	dry_run
+2026-04-18T12:00	dd3730c	category-three-realms	83	84	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	customer-value-formula	-	75	baseline	-	初始评估	dry_run
 2026-04-18T11:30	e7ae8d3	customer-value-formula	75	77	keep	D4检查点	新增Step2.5确认点	dry_run
 2026-04-18T11:00	baseline	er-yu-san-xing	-	82	baseline	-	初始评估	dry_run
+2026-04-18T12:00	dd3730c	er-yu-san-xing	82	83	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	external-thinking	-	77	baseline	-	初始评估	dry_run
 2026-04-18T11:40	df4da0e	external-thinking	77	79	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	origin-period-verification	-	78	baseline	-	初始评估	dry_run
+2026-04-18T12:00	dd3730c	origin-period-verification	78	79	keep	D4检查点	新增Step1.5确认点	dry_run
 2026-04-18T11:00	baseline	six-mental-laws	-	77	baseline	-	初始评估	dry_run
+2026-04-18T11:50	9ebec13	six-mental-laws	77	79	keep	D4检查点	新增Step1.5确认点	dry_run
