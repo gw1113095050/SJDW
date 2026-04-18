@@ -1,0 +1,52 @@
+{
+  "skill": "er-yu-san-xing",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "帮我看看我们这句广告语：'鲜榨果汁，更健康'，怎么样",
+      "expected_behavior": "激活 er-yu-san-xing，二语检验：顾客会说'这家果汁是鲜榨的，更健康'吗？三性检验：可信性归因模糊（vs谁更健康？），竞争性不足，传染性弱",
+      "notes": "广告语诊断的典型场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们的品牌顾客记不住，是不是传播出了问题",
+      "expected_behavior": "激活 er-yu-san-xing，问：顾客转介绍时会用哪句话介绍你？记不住说明二语没形成，或者三性不足",
+      "notes": "记忆问题先检传播语言是否顾客语言"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们内部觉得广告语很高级，但顾客好像无感",
+      "expected_behavior": "激活 er-yu-san-xing，诊断：高级是销售语言，顾客语言吗？二语检验：顾客转介绍时会用这句话吗？",
+      "notes": "内部视角vs顾客视角的语言差异"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一条微信公众号的推文",
+      "expected_behavior": "不激活，内容创作不是二语三性检验",
+      "notes": "诱饵：具体内容创作任务不是广告语诊断"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们老板在年会上说了一句话，同事们都在转发，这算不算传播成功",
+      "expected_behavior": "不激活，年会致辞是内部传播，不是面对顾客心智的外部传播",
+      "notes": "诱饵：内部传播不需要二语三性检验"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们是一个 toB 的工业品品牌，顾客是采购商，采购商不会像普通消费者那样聊天——二语三性在这种 B2B 场景还有效吗",
+      "expected_behavior": "可以激活er-yu-san-xing，但需要翻译：B2B场景的二语是采购商会向谁说这句话（技术部门？老板？）。三性依然有效，但可信性来自技术参数/案例背书，竞争性来自性能对比，传染性来自行业口碑",
+      "notes": "边界：B2B场景语言不同但框架仍然适用，需要场景翻译"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

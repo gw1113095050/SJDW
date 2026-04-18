@@ -1,0 +1,52 @@
+{
+  "skill": "six-mental-laws",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的广告信息量很大，每个卖点都想讲，但好像效果越来越差",
+      "expected_behavior": "激活 six-mental-laws，用容量有限规律解释：大脑一次只能处理有限信息，卖点越多顾客能接收的越少。应该做减法而不是加法",
+      "notes": "信息过载与容量有限"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么很多品牌用一个简单符号就能被记住，复杂的设计反而记不住",
+      "expected_behavior": "激活 six-mental-laws，用效率法则解释：大脑依赖心理捷径处理信息，熟悉的符号能快速激活认知结构，复杂设计需要额外认知加工",
+      "notes": "简单符号的认知机制"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们在央视投了广告，但好像没效果，是央视没用了吗",
+      "expected_behavior": "激活 six-mental-laws，用追求安全规律解释：陌生品牌在央视出现，顾客会问'这个品牌我没听过，靠谱吗'。央视背书本身不能解决认知障碍，只是增加了熟悉感，但熟悉不等于信任",
+      "notes": "大平台不等于认知成功"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们内部做了个培训，讲解品牌六大心智规律",
+      "expected_behavior": "不激活，内部培训讲解不是应用心智规律诊断品牌问题",
+      "notes": "诱饵：学习行为不是诊断行为"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "竞争对手换了一个新logo，我们也跟着换吗",
+      "expected_behavior": "不激活，logo更换决策需要先诊断品牌所处阶段和竞争格局，不是心智规律直接应用",
+      "notes": "诱饵：竞争应对策略不是心智规律诊断"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们发现顾客其实记住了我们的品牌（能说出来），但就是不买——这是什么问题",
+      "expected_behavior": "可以激活six-mental-laws，但不能直接用容量有限解释，因为这里容量不是问题。学习法则：记住了说明重复有效；但追求安全规律可能是关键——'记住了但觉得不熟悉/不确定靠不靠谱'，需要从追求安全角度诊断",
+      "notes": "边界：记住了但不买，通常是追求安全（信任/保障不足）而不是容量有限"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

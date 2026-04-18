@@ -1,0 +1,52 @@
+{
+  "skill": "brand-three-questions",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的品牌想做年轻人的生活方式品牌，不只是卖产品",
+      "expected_behavior": "激活 brand-three-questions，反问：你是什么品类？生活方式是品类吗？",
+      "notes": "用品牌理念代替品类归属的典型错误"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们logo换了一个，但好像顾客也没什么反应",
+      "expected_behavior": "激活 brand-three-questions，先问：你是什么品类？顾客选品牌时先品类后品牌，logo是外在保障",
+      "notes": "品牌动作（换logo）没有在品类层面产生效果"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们的竞争对手是XX，但他们也没好到哪里去",
+      "expected_behavior": "激活 brand-three-questions，第二问有何不同？竞争对手比较但不说明差异点是什么",
+      "notes": "差异化主张没有具体内容，停留在比较层面"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下冯卫东是里斯中国的首席定位顾问吗",
+      "expected_behavior": "不激活，纯信息查询",
+      "notes": "诱饵：信息查询不是品牌诊断"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们产品质量比竞品好，但就是卖不上价",
+      "expected_behavior": "不激活，应激活 customer-value-formula（价值从哪里来）",
+      "notes": "诱饵：表面是定价问题，实际是价值构成问题；brand-three-questions不直接回答溢价来源"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们是一个新消费品牌，目前只在淘宝卖，但想进线下渠道，这算品类扩张吗",
+      "expected_behavior": "可以激活brand-three-questions，但需要先明确：线下渠道卖同品类还是新品类？渠道变但品类不变的情况，先诊断现有品牌三问是否成立",
+      "notes": "边界：品类边界没变但渠道场景变了，需要先确认品类定义是否跟随渠道扩展"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。should_not_trigger任何一个触发都是失败。整体通过率≥80%可分析后决定。"
+}

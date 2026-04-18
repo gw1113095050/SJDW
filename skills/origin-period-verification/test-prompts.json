@@ -1,0 +1,52 @@
+{
+  "skill": "origin-period-verification",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们新品牌开了3家店，每家都排队，要不要趁热打铁开10家",
+      "expected_behavior": "激活 origin-period-verification，反问：排队是认知成果（指名购买）还是渠道成果（位置稀缺）？排队期间有没有人主动向朋友推荐？这决定能不能扩张",
+      "notes": "排队不等于原点期完成"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们增长很快，但不确定是认知成果还是投放效果",
+      "expected_behavior": "激活 origin-period-verification，分析：认知成果的标志是指名购买+口碑推荐，投放效果是外部输血而非内部循环。需要区分这两种增长",
+      "notes": "增长质量判断"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们开了20家店，前10家排队，后10家不排队了，这是好事还是坏事",
+      "expected_behavior": "激活 origin-period-verification，诊断：前10家排队可能是认知成果（火），也可能只是选址好；后10家不排队说明在原点期边界上，原点期可能还没完全突破",
+      "notes": "扩张过程中的信号识别"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们的供应链效率下降了，想优化一下",
+      "expected_behavior": "不激活，供应链优化是运营问题，不是认知成果验证",
+      "notes": "诱饵：运营问题不是原点期验证"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们准备上市，想请定位顾问帮我们梳理一下品牌战略",
+      "expected_behavior": "不激活，上市前品牌战略梳理是综合定位工作，原点期验证针对早期品牌，上市品牌属于更后期阶段",
+      "notes": "诱饵：成熟品牌的战略梳理不需要原点期验证"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的店每天GMV很高，线上销售也不错，但没有一个人说是指名购买的——这种情况怎么判断",
+      "expected_behavior": "可以激活origin-period-verification。诊断：GMV高+无指名购买=渠道/流量驱动的伪增长。需要做两件事：①看顾客复购是否依赖促销（依赖促销=无认知成果）；②看是否有自然口碑（无促销情况下是否有人主动推荐）",
+      "notes": "边界：高GMV但无认知成果的判断"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

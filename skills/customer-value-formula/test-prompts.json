@@ -1,0 +1,52 @@
+{
+  "skill": "customer-value-formula",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的产品质量明明比别人好，但就是卖不上价，这是为什么",
+      "expected_behavior": "激活 customer-value-formula，分析：产品好是内在价值，但溢价来自外在价值（保障+彰显）。若不翻译成品牌价值，再好的产品也只是功能层面的竞争",
+      "notes": "产品好但溢价低，说明品牌没有建立外在价值"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "顾客老说我们'贵'，但我们成本确实高，怎么破",
+      "expected_behavior": "激活 customer-value-formula，反问：顾客说贵是在说功能贵还是身份贵？成本高不等于顾客愿意为此付溢价，需要把成本优势翻译成顾客可感知的保障价值或彰显价值",
+      "notes": "成本视角和顾客价值视角不同"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "星巴克为什么能卖三十多一杯，其他咖啡只能卖十几块",
+      "expected_behavior": "激活 customer-value-formula，分析：星巴克的溢价来自外在价值（第三空间/身份彰显/品牌保障），不只是产品内在价值（咖啡本身）。内在价值差距不大，外在价值差距巨大",
+      "notes": "用具体品牌分析价值构成"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们和竞争对手的成本结构差不多，谁更有定价优势",
+      "expected_behavior": "不激活，成本结构分析是财务运营问题，不涉及顾客价值构成",
+      "notes": "诱饵：纯成本分析不是顾客价值配方问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "怎么设计一个好的产品包装",
+      "expected_behavior": "不激活，包装设计是执行层面问题，需要先知道包装承载的是内在价值还是彰显价值",
+      "notes": "诱饵：包装是价值载体不是价值本身，未确定价值定位前设计包装是无根之木"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "两个功能几乎一样的吹风机，一个卖199，一个卖1999，1999那个除了'戴森'这个品牌名字不一样，其他功能差异说不出——凭什么能卖1999",
+      "expected_behavior": "可以激活customer-value-formula。分析：1999的溢价来源是品牌彰显价值（社会认同/身份标签）和保障价值（品牌承诺）。顾客买戴森不只是买吹风机，是买'我是注重生活品质的人'这个身份信号",
+      "notes": "边界：高溢价品牌的溢价来源不是功能，是心理价值"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

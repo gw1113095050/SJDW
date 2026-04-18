@@ -1,0 +1,52 @@
+{
+  "skill": "brand-five-stages",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们品牌增长放缓了，是不是该换个方向？",
+      "expected_behavior": "激活 brand-five-stages，先问：目前处于哪个阶段？增长放缓不等于到顶，可能是进攻期信号",
+      "notes": "增长放缓是扩张期到顶还是进攻期信号，需要五阶段框架判断"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们的护城河不明显，但还想扩张，怎么办",
+      "expected_behavior": "激活 brand-five-stages，判断所处阶段。护城河不明显说明防御期条件未成熟，不适合扩张",
+      "notes": "护城河是防御期才需要重点建设的，不是扩张期"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们要不要进入北京市场？已经在上海深圳验证了",
+      "expected_behavior": "激活 brand-five-stages，先判断：上海深圳验证的是认知成果还是渠道成果？若是指名购买+口碑推荐=原点期完成，可进入扩张期",
+      "notes": "扩张时机判断需要原点期验证结论做前提"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "里斯定位理论和特劳特定位理论有什么区别",
+      "expected_behavior": "不激活，纯信息查询/理论比较",
+      "notes": "诱饵：学术理论比较不是品牌阶段诊断"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们的员工流失率很高，应该怎么留人",
+      "expected_behavior": "不激活，内部运营管理问题，与品牌发展阶段无关",
+      "notes": "诱饵：组织管理问题不是品牌战略问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的GMV三年涨了三倍，但最近竞争对手也变多了，这是好事还是坏事",
+      "expected_behavior": "可以激活brand-five-stages。GMV增长+对手增多=进攻期信号可能性大，不一定是坏事，但需要主动攻击领导品牌弱点而非继续扩张",
+      "notes": "边界：GMV增长与竞争格局变化同时发生时，需要五阶段框架判断是继续扩张还是进入进攻"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

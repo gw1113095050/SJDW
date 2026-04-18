@@ -1,0 +1,52 @@
+{
+  "skill": "category-three-realms",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们觉得'大健康'是个大赛道，想做这个品类的品牌",
+      "expected_behavior": "激活 category-three-realms，诊断：大健康是抽象品类还是真品类？顾客能说出具体品牌名并完成购买吗？",
+      "notes": "行业名不等于顾客语言中的品类，抽象品类不能形成品牌竞争"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们品牌叫'潮流前线'，算不算一个品类",
+      "expected_behavior": "激活 category-three-realms，诊断：潮流前线是顾客购买决策中会调用的分类吗？顾客会说'我要买潮流前线的衣服'吗？",
+      "notes": "品牌名带品类感但实际是伪品类"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们从奶茶扩展到咖啡，品类边界在哪里",
+      "expected_behavior": "激活 category-three-realms，先判断：奶茶和咖啡在顾客认知中是同一品类还是不同品类？边界由顾客认知决定不是企业决定",
+      "notes": "品类边界决定了扩张是否成立"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们产品成本上升了，怎么定价",
+      "expected_behavior": "不激活，成本和定价是财务/运营问题，不是品类诊断",
+      "notes": "诱饵：定价策略与品类真假无关"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "请帮我梳理一下碳酸饮料的市场格局",
+      "expected_behavior": "不激活，市场格局分析是行业研究，不是品类真假诊断",
+      "notes": "诱饵：行业竞争分析不是品类三界诊断"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "预制菜是伪品类吗？很多人在说但也没有清晰定义",
+      "expected_behavior": "可以激活category-three-realms，判断标准：顾客在购买决策中会主动调用'预制菜'这个分类吗？会说'我要买预制菜'吗？——预制菜目前在向真品类演化，但定义边界仍在模糊阶段",
+      "notes": "边界：新兴品类处于演化中，诊断结果依赖当下顾客认知"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}

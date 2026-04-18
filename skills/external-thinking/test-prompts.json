@@ -1,0 +1,52 @@
+{
+  "skill": "external-thinking",
+  "version": "0.1.0",
+  "source_book": "《升级定位25讲》— 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的东西顾客应该能理解啊，为什么就是记不住",
+      "expected_behavior": "激活 external-thinking，反问：顾客脑子里已经有什么认知结构？你的信息和它对接了吗？内部觉得'理解'不代表顾客能接收",
+      "notes": "信息发送者视角vs接收者视角的经典错位"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们官网banner写的是'赋能企业数字化转型'，但好像没什么人点",
+      "expected_behavior": "激活 external-thinking，诊断：'赋能'是内部术语，顾客脑子里没有这个认知框架；应该翻译成顾客关心的具体结果",
+      "notes": "专业术语不等于顾客语言"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们的广告创意明明很好，得了奖，但顾客好像完全无感",
+      "expected_behavior": "激活 external-thinking，诊断：好创意是从发送者角度定义的，顾客只关心和自己已有认知相关的信息。得了奖不代表顾客心智能接收",
+      "notes": "创意评估和心智接收是两个不同标准"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们设计了一个新的门店动线，想听听反馈",
+      "expected_behavior": "不激活，门店动线是物理空间设计问题，不是信息传达问题",
+      "notes": "诱饵：空间设计不等于信息设计"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下定位理论的发展历史",
+      "expected_behavior": "不激活，历史查询不是外部思维应用",
+      "notes": "诱饵：学术历史研究不需要外部思维诊断"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的目标顾客是'认知水平较高的专业人士'，他们应该能理解我们的专业表述——这么想有什么问题",
+      "expected_behavior": "可以激活external-thinking，诊断：'专业人士'不等于能处理所有抽象术语；专业人士在其专业领域之外同样是外部思维的作用对象；高认知人群对熟悉领域之外的术语同样需要翻译",
+      "notes": "边界：目标人群'专业'不等于能跳过外部思维；外部思维挑战的是'发送者视角'而非'受众水平'"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "诱饵测试容错为0。"
+}
