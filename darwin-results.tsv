@@ -1,0 +1,9 @@
+timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
+2026-04-18T11:00	baseline	brand-three-questions	-	82	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	brand-five-stages	-	80	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	category-three-realms	-	83	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	customer-value-formula	-	75	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	er-yu-san-xing	-	82	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	external-thinking	-	77	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	origin-period-verification	-	78	baseline	-	初始评估	dry_run
+2026-04-18T11:00	baseline	six-mental-laws	-	77	baseline	-	初始评估	dry_run
